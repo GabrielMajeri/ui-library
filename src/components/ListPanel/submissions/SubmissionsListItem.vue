@@ -5,6 +5,9 @@
 				<div class="listPanel__item--submission__id">
 					{{ item.id }}
 				</div>
+				<div class="listPanel__item--submission__internalId">
+					{{ item.internalId }}
+				</div>
 				<div class="listPanel__itemTitle">
 					<span v-if="currentUserIsReviewer">
 						{{ __('submission.list.reviewAssignment') }}
@@ -874,13 +877,22 @@ export default {
 
 .listPanel__itemIdentity--submission,
 .listPanel__itemExpanded--submission {
-	padding-inline-start: 2.5rem;
+	padding-inline-start: 4.5rem;
 }
 
 .listPanel__item--submission__id {
 	position: absolute;
 	top: 0;
 	left: 0;
+	font-size: @font-tiny;
+	line-height: 1.5rem; // Match baseline of title/author
+	color: @text;
+}
+
+.listPanel__item--submission__internalId {
+	position: absolute;
+	top: 0;
+	left: 1.5rem;
 	font-size: @font-tiny;
 	line-height: 1.5rem; // Match baseline of title/author
 	color: @text;
