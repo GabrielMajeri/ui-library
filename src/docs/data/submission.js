@@ -7,6 +7,7 @@ export default {
 	dateLastActivity: '2019-06-25 16:52:47',
 	dateSubmitted: '2019-05-30 12:28:18',
 	id: 1,
+	internalId: '123',
 	lastModified: '2019-06-25 16:40:29',
 	publications: [{...publication}],
 	reviewAssignments: [],
